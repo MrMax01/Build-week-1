@@ -75,5 +75,9 @@ footer {
 }
 
 #prosegui:hover {
-  background-color: #ba008b;
+  background-color: #d20094;
+}
+
+.violet {
+  color: #d20094;
 }
