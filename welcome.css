@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@400;700&display=swap%27');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}   
+
+body {
+    background-image: url(/Assets/bg.jpg);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    object-fit: cover;
+}
+
+img {
+    width: 200px;
+    margin-left: 140px;
+    margin-top: 50px;
+    object-fit: cover;
+}
+
+.margin {
+    padding-left: 140px;
+}
+
+h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 80px;
+    font-weight: 100;
+    line-height: 80px;
+    color: whitesmoke;
+}
+
+h2 {
+    color: #d20094;
+    font-family: 'Outfit', sans-serif;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+p {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin-top: 0px;
+}
+
+ul {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+ul li {
+    color: white;
+    height: 25px;
+    font-family: 'Inter', sans-serif;
+}
+
+form {
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+/*CHECKBOX /*/
+.container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*Nascondi la checkbox del broweser di default /*/
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/*Crea una checkbox custom /*/
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+/*Create the checkmark/indicator (hidden when not checked) /*/
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/*Show the checkmark when checked /*/
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/*Style the checkmark/indicator /*/
+.container .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+button {
+    margin-inline: 276px;
+    padding: 15px 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    background-color: aqua;
+    border: none;
+    display: inline-block;
+    box-shadow: rgb(0, 145, 189) 0px 2px 4px 0px, rgb(18, 178, 247) 0px 2px 16px 0px;
+} 
