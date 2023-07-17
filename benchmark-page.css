@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  background-image: url(./Assets/bg.jpg);
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+header {
+  width: 70%;
+  margin-inline: auto;
+  padding-top: 2em;
+}
+main {
+  text-align: center;
+  width: 70%;
+  margin-inline: auto;
+  padding: 2em 4em;
+}
+h3 {
+  font-weight: 100;
+  font-size: 2rem;
+}
+h4 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0;
+  margin-top: 12px;
+}
+
+#logo {
+  max-width: 200px;
+}
+.bold {
+  font-weight: bold;
+}
+
+#cerchio-tempo {
+  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  border: 5px solid lightblue;
+  width: 100px;
+  height: 100px;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+button {
+  width: 45%;
+  margin: 10px;
+  font-size: 1.5em;
+  border-radius: 25px;
+  padding: 0.5em;
+  background-color: transparent;
+  /* border-color: white; */
+  color: white;
+  border: 2px outset white;
+}
