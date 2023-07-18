@@ -92,10 +92,6 @@ input:focus {
     font-size: 20px;
     color: aqua;
     background-color: transparent;
-    /* background-color: aqua; /
-    / border: none; /
-    display: inline-block;
-    / box-shadow: rgb(0, 145, 189) 0px 2px 4px 0px, rgb(18, 178, 247) 0px 2px 16px 0px; */
 }
 
 .my-button:hover {
