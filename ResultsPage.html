@@ -4,29 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Results Page</title>
-    <link rel="stylesheet" href="ResultsPage.css" />
+    <!-- <link rel="stylesheet" href="ResultsPage.css" /> 
+    -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <div><img class="logo" src="Assets/epicode_logo.png" alt="epicode_logo" /></div>
+    <header>
+      <div><img id="logo" src="Assets/epicode_logo.png" alt="epicode_logo" /></div>
+    </header>
+    <main>
       <div class="introdution">
-        <h1>Results</h1>
-        <p>The summary of your answers:</p>
+        <h1 class="size-result no-margin">Results</h1>
+        <h2>The summary of your answers:</h2>
       </div>
       <div id="selector">
         <div class="center">
-          <p class="fontgrande">
+          <p class="size-result no-margin">
             Correct <br />
-            66.7% <br />
+            <b>66.7% </b><br />
           </p>
-          <p class="paragrafo">4/6 questions</p>
+          <p>4/6 questions</p>
         </div>
-        <div class="center">
-          <p style="font-size: 30px">
-            Congratulations! <br />
-            <span>You passed the exam:</span>
-          </p>
+        <div class="center" id="diagramma">
           <p>
+            <b
+              >Congratulations! <br />
+              <span class="aqua">You passed the exam:</span></b
+            >
+          </p>
+          <p class="font-piccolo">
             we'll send you the certificate <br />
             in few minutes. <br />
             Check your email &lpar; including <br />
@@ -34,14 +40,14 @@
           </p>
         </div>
         <div class="center">
-          <p class="fontgrande">
+          <p class="size-result no-margin">
             Wrong <br />
-            33.3% <br />
+            <b>33.3%</b> <br />
           </p>
-          <p class="paragrafo">2/6 questions</p>
+          <p>2/6 questions</p>
         </div>
       </div>
-      <button class="myButton">RATE US</button>
-    </div>
+    </main>
+    <button class="button-luminoso middle">RATE US</button>
   </body>
 </html>

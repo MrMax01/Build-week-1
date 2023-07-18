@@ -3,17 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="welcome.css" />
+    <!-- <link rel="stylesheet" href="welcome.css" /> -->
+    <link rel="stylesheet" href="styles.css" />
     <title>EPICODE - Welcome Page</title>
   </head>
   <body>
-    <div class="container">
-      <img src="/Assets/epicode_logo.png" alt="epicode_logo" />
-      <h1>
+    <header>
+      <img src="/Assets/epicode_logo.png" alt="epicode_logo" id="logo" />
+    </header>
+    <main>
+      <h1 class="font-grande line-height">
         Welcome to <br />
         <b>your exam</b>
       </h1>
-      <h2>Instructions</h2>
+      <h2 class="violet">Instructions</h2>
       <p>
         We don't expect most engineers to know the answers to all of these <br />
         questions, so don't worry if you're unsure of a few of them.
@@ -23,13 +26,16 @@
         <li>Changing browser tab or opening other windows will <b>invalidate the question</b> .</li>
         <li>This exam will take approx. <b>0-5 minutes</b> .</li>
       </ul>
-      <form>
+    </main>
+    <footer>
+      <form action="benchmark-page.html">
         <label class="label-container">
           <input type="checkbox" required />
           <span class="checkmark"></span><b>I promise to answer myself without help from anyone</b>
         </label>
-        <button type="submit"><b>PROCEED</b></button>
+
+        <button type="submit" class="button-luminoso"><b>PROCEED</b></button>
       </form>
-    </div>
+    </footer>
   </body>
 </html>

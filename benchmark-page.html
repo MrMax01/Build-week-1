@@ -3,27 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="benchmark-page.css" />
+    <!-- <link rel="stylesheet" href="benchmark-page.css" /> -->
+    <link rel="stylesheet" href="styles.css" />
     <title>Benchmark - page</title>
   </head>
   <body>
     <header>
       <img src="./Assets/epicode_logo.png" alt="Epicode logo" id="logo" />
-      <div id="cerchio-tempo">
-        <h4>16</h4>
-        <p class="no-margin">sec</p>
-      </div>
     </header>
-    <main>
+    <main class="benchmark-stats">
       <!--ESEMPIO: DA CARICARE POI DINAMICAMENTE CON JAVASCRIPT-->
       <h3>Lorem ipsum dolor sit amet <span class="bold">consectetur adipisicing elit?</span></h3>
-      <button>A</button>
-      <button>B</button>
-      <button>C</button>
-      <button>D</button>
+      <button class="risposta">A</button>
+      <button class="risposta">B</button>
+      <button class="risposta">C</button>
+      <button class="risposta">D</button>
     </main>
     <footer>
-      <button id="prosegui">Prosegui</button>
+      <button class="button-luminoso">Prosegui</button>
       <p>QUESTION 1<span class="violet"> / 10</span></p>
     </footer>
     <script src="benchmark-page.js"></script>
