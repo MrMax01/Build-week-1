@@ -25,7 +25,9 @@ footer {
   margin-inline: auto;
   margin-bottom: 5em;
 }
-
+header {
+  padding: 1em;
+}
 #logo {
   max-width: 200px;
 }
@@ -35,13 +37,18 @@ h3,
 h4 {
   font-family: "Outfit", sans-serif;
 }
-
+a {
+  text-decoration: none;
+}
 ul {
   margin-top: 50px;
   margin-bottom: 80px;
 }
 .font-grande {
   font-size: 5rem;
+}
+.font-medio {
+  font-size: 1.7rem;
 }
 .font-piccolo {
   font-size: 0.8em;
@@ -55,9 +62,13 @@ ul {
 .aqua {
   color: #00ffff;
 }
+.centerText {
+  text-align: center;
+}
 
 .button-luminoso {
   float: right;
+  cursor: pointer;
   padding: 15px 50px;
   border: 3px solid aqua;
   font-family: "Inter", sans-serif;
@@ -113,16 +124,45 @@ ul {
   font-family: "Inter", sans-serif;
 }
 
-.middle {
-  display: block;
-  margin-inline: auto;
-  float: none;
-}
 .size-result {
   font-size: 4em;
 }
 .no-margin {
   margin: 0;
+}
+
+/*FEEDBACK PAGE*/
+
+.containStar {
+  text-align: center;
+}
+
+.star {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #01062d;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.stellina {
+  background-image: url(/Assets/star.svg);
+  background-size: cover;
+}
+.input-feedback {
+  margin-top: 20px;
+  border: none;
+  border-bottom: 3px solid purple;
+  padding-bottom: 5px;
+  background-color: transparent;
+  width: 650px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.input-feedback:focus {
+  outline: none;
 }
 /*CUSTOM CHECKBOX*/
 /*CHECKBOX /*/
@@ -182,4 +222,10 @@ ul {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.middle {
+  display: block;
+  margin-inline: auto;
+  float: none;
 }
