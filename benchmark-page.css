@@ -10,7 +10,7 @@ html {
 body {
   background-image: url(./Assets/bg.jpg);
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
   font-family: "Outfit", sans-serif;
 }
@@ -79,5 +79,5 @@ footer {
 }
 
 .violet {
-  color: #d20094;
+  color: #900080;
 }
