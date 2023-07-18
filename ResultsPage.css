@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@400;700&display=swap%27");
+body {
+  height: 100vh;
+  background-image: url(Assets/bg.jpg);
+  background-size: cover;
+}
+.container {
+  width: 70%;
+  margin-inline: auto;
+}
+
+#selector {
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Inter", sans-serif;
+}
+
+.logo {
+  height: 55px;
+  margin-left: 210px;
+  margin-top: 55px;
+}
+
+.introdution {
+  text-align: center;
+  color: white;
+  padding-bottom: 150px;
+  font-family: "Outfit", sans-serif;
+}
+.introdution h1 {
+  font-size: 80px;
+  margin-bottom: 0;
+}
+
+.introdution p {
+  font-size: 30px;
+  margin-top: 0;
+}
+.center {
+  color: white;
+  width: 28%;
+  display: inline-block;
+  margin: 2%;
+  vertical-align: middle;
+}
+.first-p {
+  font-size: 70px;
+}
+
+.center span {
+  color: #00ffff;
+}
+
+.bottone {
+  text-align: center;
+  padding-top: 250px;
+}
+
+.bottone input {
+  font-size: 70px;
+}
+
+.fontgrande {
+  font-size: 70px;
+}
+
+.paragrafo {
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.myButton {
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  margin-inline: auto;
+  padding: 25px 90px;
+  display: block;
+  border: 5px solid white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 150px;
+}
