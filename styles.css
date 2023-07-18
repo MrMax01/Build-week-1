@@ -229,3 +229,7 @@ ul {
   margin-inline: auto;
   float: none;
 }
+
+.active {
+  background-color: #d20094;
+}

@@ -416,3 +416,13 @@ const questions = [
     incorrect_answers: ["Java Vendor Machine", "Java Visual Machine", "Just Virtual Machine"],
   },
 ];
+
+let domandaPescata = {};
+const main = document.querySelector("main");
+const buttonProsegui = document.getElementById("prosegui");
+const numeroDomande = 10;
+let risposte = [];
+const numero = document.getElementById("numeroDomanda");
+
+let domandaNumero = 0;
+let risultato = 0;

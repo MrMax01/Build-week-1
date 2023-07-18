@@ -13,15 +13,15 @@
     </header>
     <main class="benchmark-stats">
       <!--ESEMPIO: DA CARICARE POI DINAMICAMENTE CON JAVASCRIPT-->
-      <h3>Lorem ipsum dolor sit amet <span class="bold">consectetur adipisicing elit?</span></h3>
-      <button class="risposta">A</button>
-      <button class="risposta">B</button>
-      <button class="risposta">C</button>
-      <button class="risposta">D</button>
+      <h3 id="domanda"></h3>
+      <!-- <button class="risposta"></button>
+      <button class="risposta"></button>
+      <button class="risposta"></button>
+      <button class="risposta"></button> -->
     </main>
     <footer>
-      <button class="button-luminoso"><b>Prosegui</b></button>
-      <p>QUESTION 1<span class="violet"> / 10</span></p>
+      <button class="button-luminoso" id="prosegui"><b>Prosegui</b></button>
+      <p>QUESTION <span id="numeroDomanda"></span><span class="violet"> / 10</span></p>
     </footer>
     <script src="data.js"></script>
     <script src="benchmark.js"></script>
