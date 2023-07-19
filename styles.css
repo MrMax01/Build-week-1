@@ -268,7 +268,7 @@ circle#result {
   fill: none;
   stroke: url(#GradientColor);
   stroke-width: 15px;
-  stroke-dasharray: 437 500;
+  stroke-dasharray: 0 500;
   animation: anim 2s linear;
 }
 svg {
@@ -283,7 +283,7 @@ svg {
     stroke-dasharray: 0 500;
   }
 
-  10% {
+  /* 10% {
     stroke-dasharray: 10% 500;
   }
   20% {
@@ -291,7 +291,7 @@ svg {
   }
   30% {
     stroke-dasharray: 30% 500;
-  }
+  } */
 }
 /*CIRCLE TIMEOUT*/
 .time-out {
