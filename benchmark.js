@@ -39,6 +39,7 @@ const showDomanda = () => {
 
   pickRandomQuestion();
   //   console.log(domandaPescata.question);
+  header.innerHTML = timeOutHTML;
   const h3 = document.createElement("h3");
   h3.innerText = domandaPescata.question;
   h3.setAttribute("id", "domanda");

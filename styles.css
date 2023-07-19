@@ -234,7 +234,7 @@ ul {
   background-color: #d20094;
 }
 
-/*CIRCLE*/
+/*CIRCLE result page*/
 .skill {
   margin-inline: auto;
   width: 250px;
@@ -287,4 +287,43 @@ svg {
   30% {
     stroke-dasharray: 30% 500;
   }
+}
+/*CIRCLE TIMEOUT*/
+.time-out {
+  width: 160px;
+  height: 160px;
+  /* background-color: aquamarine; */
+  margin-left: 80%;
+}
+.outer-time-out {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  padding: 22px;
+  box-shadow: 6px 6px 10px -1px rgb(0, 0, 0, 0.15), -6px -6px 10px -1px rgb(0, 0, 0, 0.7);
+}
+.inner-time-out {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  box-shadow: inset 4px 4px 6px -1px rgb(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgb(0, 0, 0, 0.7),
+    -0.5px -0.5px 0px rgb(0, 0, 0, 0.7);
+}
+.text-time-out {
+  padding: 17px;
+  font-size: 5rem;
+}
+#circle-time-out {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 15px;
+  stroke-dasharray: 437 500;
+  /* animation: anim 2s linear; */
+}
+#svg-time-out {
+  position: relative;
+  top: -160px;
+  left: 0px;
 }

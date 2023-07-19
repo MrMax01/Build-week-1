@@ -419,6 +419,7 @@ const questions = [
 
 let domandaPescata = {};
 const main = document.querySelector("main");
+const header = document.querySelector("header");
 const buttonProsegui = document.getElementById("prosegui");
 const numeroDomande = 10;
 let risposte = [];
@@ -426,3 +427,28 @@ const numero = document.getElementById("numeroDomanda");
 
 let domandaNumero = 0;
 let risultato = 0;
+const timeOutHTML = `
+      <img src="./Assets/epicode_logo.png" alt="Epicode logo" id="logo" />
+      <div class="time-out">
+        <div class="outer-time-out">
+          <div class="inner-time-out">
+            <div class="text-time-out">59</div>
+          </div>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          viewBox="0 0 159 159"
+          width="160px"
+          height="160px"
+          id="svg-time-out"
+        >
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle-time-out" />
+        </svg>
+      </div>`;
