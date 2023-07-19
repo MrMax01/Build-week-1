@@ -5,6 +5,7 @@
 
 4. una volta risposto l'ultima domanda il tasto PROSEGUI ci indirizzerà nella pagina 'result page'
 */
+
 const pickRandomQuestion = () => {
   const randomIndex = Math.floor(Math.random() * questions.length);
   domandaPescata = questions[randomIndex];
