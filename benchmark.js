@@ -8,7 +8,8 @@
 const pickRandomQuestion = () => {
   const randomIndex = Math.floor(Math.random() * questions.length);
   domandaPescata = questions[randomIndex];
-  risposte = domandaPescata.incorrect_answers.concat(domandaPescata.correct_answer).sort();
+  risposte = domandaPescata.incorrect_answers.concat(domandaPescata.correct_answer);
+  // .sort();
 };
 const cambioNumero = () => {
   domandaNumero++;
