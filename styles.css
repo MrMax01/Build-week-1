@@ -16,6 +16,7 @@ body {
   min-height: 100vh;
   color: white;
   font-family: "Outfit", sans-serif;
+  margin: 0;
 }
 
 header,
@@ -23,7 +24,6 @@ main,
 footer {
   width: 80%;
   margin-inline: auto;
-  margin-bottom: 5em;
 }
 header {
   padding: 1em;
@@ -90,7 +90,7 @@ ul {
 .benchmark-stats {
   text-align: center;
   padding: 2em 4em;
-  margin-bottom: 8em;
+  /* margin-bottom: 8em; */
 }
 .risposta {
   width: 45%;

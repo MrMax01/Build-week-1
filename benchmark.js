@@ -77,9 +77,16 @@ const app = () => {
         <div class="outer">
           <div class="inner">
             <div class="text">
-              <span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempora expedita quae, atque
-              </span>
+            <span>
+            <b
+              >Congratulations! <br />
+              <span class="aqua"> You passed the exam. </span></b
+            >
+            <span class="font-piccolo"
+              >We'll send you the certificate in few minutes. <br />
+              Check your email(including <br />
+              promotions/spam folder)</span
+            >
             </div>
           </div>
         </div>
