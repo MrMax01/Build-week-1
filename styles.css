@@ -233,3 +233,40 @@ ul {
 .active {
   background-color: #d20094;
 }
+/*CIRCLE*/
+.skill {
+  margin-inline: auto;
+  width: 250px;
+  height: 250px;
+  /* background-color: aquamarine; */
+}
+.outer {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  padding: 25px;
+  box-shadow: 6px 6px 10px -1px rgb(0, 0, 0, 0.15), -6px -6px 10px -1px rgb(0, 0, 0, 0.7);
+}
+.inner {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  box-shadow: inset 4px 4px 6px -1px rgb(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgb(0, 0, 0, 0.7),
+    -0.5px -0.5px 0px rgb(0, 0, 0, 0.7);
+}
+.text {
+  padding-top: 48px;
+}
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 15px;
+  stroke-dasharray: 472;
+}
+svg {
+  position: relative;
+  top: -257px;
+  left: -6px;
+}
