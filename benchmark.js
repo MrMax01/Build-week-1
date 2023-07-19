@@ -57,7 +57,58 @@ const app = () => {
     controllaRisultato();
     showDomanda();
   } else {
-    console.log("HAI PRESO: " + risultato);
+    const resultPageHTML = `<div class="introdution">
+    <h1 class="size-result no-margin">Results</h1>
+    <h2>The summary of your answers:</h2>
+    </div>
+    <div id="selector">
+    <div class="center">
+      <p class="size-result no-margin">
+        Correct <br />
+        <b>${(risultato * 100) / 10}%</b><br />
+      </p>
+      <p>${risultato}/10 questions</p>
+    </div>
+    <div class="center">
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div class="text">
+              <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempora expedita quae, atque
+              </span>
+            </div>
+          </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 159 159" width="260px" height="260px">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+        </svg>
+      </div>
+    </div>
+    <div class="center">
+      <p class="size-result no-margin">
+        Wrong <br />
+        <b>${Math.abs((risultato - 10) * 100) / 10}%</b> <br />
+      </p>
+      <p>${Math.abs(risultato - 10)}/10 questions</p>
+    </div>
+    </div>`;
+    main.innerHTML = resultPageHTML;
+    document
+      .querySelector("circle")
+      .setAttribute("style", `stroke-dasharray: ${Math.floor((437 / 10) * risultato)} 500`);
+
+    document.querySelector("footer").innerHTML = `
+      <a href="feedback.html"
+        ><button class="button-luminoso middle"><b>RATE US</b></button></a
+      >
+    `;
   }
 };
 

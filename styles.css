@@ -90,7 +90,7 @@ ul {
 .benchmark-stats {
   text-align: center;
   padding: 2em 4em;
-  margin-bottom: 11em;
+  margin-bottom: 8em;
 }
 .risposta {
   width: 45%;
@@ -263,10 +263,27 @@ circle {
   fill: none;
   stroke: url(#GradientColor);
   stroke-width: 15px;
-  stroke-dasharray: 472;
+  stroke-dasharray: 437 500;
+  animation: anim 2s linear;
 }
 svg {
   position: relative;
   top: -257px;
   left: -6px;
+}
+
+@keyframes anim {
+  0% {
+    stroke-dasharray: 0 500;
+  }
+
+  10% {
+    stroke-dasharray: 10% 500;
+  }
+  20% {
+    stroke-dasharray: 20% 500;
+  }
+  30% {
+    stroke-dasharray: 30% 500;
+  }
 }
