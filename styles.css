@@ -17,6 +17,7 @@ body {
   color: white;
   font-family: "Outfit", sans-serif;
   margin: 0;
+  overflow: hidden;
 }
 
 header,
@@ -25,6 +26,9 @@ footer {
   width: 80%;
   margin-inline: auto;
 }
+/* main {
+  height: 20em;
+} */
 header {
   padding: 1em;
 }
@@ -271,6 +275,7 @@ svg {
   position: relative;
   top: -257px;
   left: -6px;
+  rotate: 270deg;
 }
 
 @keyframes anim {
