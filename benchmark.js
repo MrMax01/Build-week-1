@@ -5,4 +5,9 @@
 
 4. una volta risposto l'ultima domanda il tasto PROSEGUI ci indirizzerà nella pagina 'result page'
 */
-console.log(questions[0].question);
+document.getElementById("myButton").addEventListener("click", function () {
+  const checkbox = document.getElementById("myCheckbox");
+  if (!checkbox.checked) {
+    alert("click Checkbox for continue");
+  }
+});
