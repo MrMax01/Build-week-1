@@ -424,7 +424,7 @@ const buttonProsegui = document.getElementById("prosegui");
 const numeroDomande = 10;
 let risposte = [];
 const numero = document.getElementById("numeroDomanda");
-
+let timer = null;
 let domandaNumero = 0;
 let risultato = 0;
 const logo = `<img src="./Assets/epicode_logo.png" alt="Epicode logo" id="logo" />`;
@@ -433,13 +433,13 @@ const timeOutHTML = `
       <div class="time-out">
         <div class="outer-time-out">
           <div class="inner-time-out">
-            <div class="text-time-out">59</div>
+            <div class="text-time-out"><span class="seconds"></span></div>
           </div>
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
-          viewBox="0 0 159 159"
+        
           width="160px"
           height="160px"
           id="svg-time-out"

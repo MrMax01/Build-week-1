@@ -33,6 +33,24 @@ const controllaRisultato = () => {
   }
 };
 
+const setTimeOut = () => {
+  const seconds = document.querySelector(".seconds");
+  let time = 10;
+  const equalPie = Math.floor(450 / (time + 1));
+  let sumPies = 0;
+  timer = setInterval(() => {
+    seconds.innerText = time;
+    time--;
+    sumPies += equalPie;
+    document.getElementById("circle-time-out").setAttribute("style", `stroke-dasharray: ${sumPies} 500`);
+
+    if (time < -1) {
+      clearTimeout(timer);
+      showDomanda();
+    }
+  }, 1000);
+};
+
 const showDomanda = () => {
   main.innerHTML = "";
   cambioNumero();
@@ -52,13 +70,16 @@ const showDomanda = () => {
     button.innerText = risposte[i];
     main.appendChild(button);
   }
+  setTimeOut();
 };
 
 const app = () => {
   if (domandaNumero < numeroDomande) {
+    clearInterval(timer);
     controllaRisultato();
     showDomanda();
   } else {
+    clearInterval(timer);
     header.innerHTML = logo;
     const resultPageHTML = `<div class="introdution">
     <h1 class="size-result no-margin">Results</h1>
@@ -97,7 +118,7 @@ const app = () => {
               <stop offset="100%" stop-color="#673ab7" />
             </linearGradient>
           </defs>
-          <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" id="result" />
         </svg>
       </div>
     </div>

@@ -264,7 +264,7 @@ ul {
 .text {
   padding-top: 48px;
 }
-circle {
+circle#result {
   fill: none;
   stroke: url(#GradientColor);
   stroke-width: 15px;
@@ -324,8 +324,7 @@ svg {
   fill: none;
   stroke: url(#GradientColor);
   stroke-width: 15px;
-  stroke-dasharray: 437 500;
-  /* animation: anim 2s linear; */
+  stroke-dasharray: 0 500;
 }
 #svg-time-out {
   position: relative;
