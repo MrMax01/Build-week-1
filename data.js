@@ -427,8 +427,9 @@ const numero = document.getElementById("numeroDomanda");
 
 let domandaNumero = 0;
 let risultato = 0;
+const logo = `<img src="./Assets/epicode_logo.png" alt="Epicode logo" id="logo" />`;
 const timeOutHTML = `
-      <img src="./Assets/epicode_logo.png" alt="Epicode logo" id="logo" />
+      ${logo}
       <div class="time-out">
         <div class="outer-time-out">
           <div class="inner-time-out">

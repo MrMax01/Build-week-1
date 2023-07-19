@@ -59,6 +59,7 @@ const app = () => {
     controllaRisultato();
     showDomanda();
   } else {
+    header.innerHTML = logo;
     const resultPageHTML = `<div class="introdution">
     <h1 class="size-result no-margin">Results</h1>
     <h2>The summary of your answers:</h2>
