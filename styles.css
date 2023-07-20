@@ -25,7 +25,7 @@ main,
 footer {
   width: 80%;
   margin-inline: auto;
-  margin-bottom: 2em;
+  /* margin-bottom: 2em; */
 }
 /* main {
   height: 20em;
@@ -41,6 +41,13 @@ h2,
 h3,
 h4 {
   font-family: "Outfit", sans-serif;
+}
+h5 {
+  margin: 0;
+  font-size: 1.5rem;
+  /* padding-top: 2em; */
+  margin-top: 1.5rem;
+  font-weight: lighter;
 }
 a {
   text-decoration: none;
@@ -84,6 +91,7 @@ ul {
   /* border: none; */
   display: inline-block;
   /* box-shadow: rgb(0, 145, 189) 0px 2px 4px 0px, rgb(18, 178, 247) 0px 2px 16px 0px; */
+  font-weight: bold;
 }
 .button-luminoso:hover {
   border: 3px solid transparent;
@@ -91,11 +99,14 @@ ul {
   box-shadow: rgb(0, 145, 189) 0px 2px 4px 0px, rgb(18, 178, 247) 0px 2px 16px 0px;
   background-color: aqua;
 }
+.no-float {
+  float: none;
+}
 /*---------------------------BENCHMARK PAGE---------------------------*/
 .benchmark-stats {
   text-align: center;
-  padding: 2em 4em;
-  /* margin-bottom: 8em; */
+  /* padding: 2em 4em; */
+  margin-bottom: 4em;
 }
 .risposta {
   width: 45%;
@@ -245,6 +256,7 @@ ul {
   display: block;
   margin-inline: auto;
   float: none;
+  margin-top: 2em;
 }
 
 .active {
@@ -365,4 +377,32 @@ svg {
   top: -140px;
   left: 15px;
   font-size: 0.2em;
+}
+/* INFO QUESTIONS*/
+.no-height {
+  min-height: 0;
+  overflow: visible;
+}
+.no-show {
+  height: 0;
+  overflow-y: hidden;
+  text-align: left;
+
+  transition: 0.4s;
+}
+.show {
+  height: 80px;
+}
+.wrong {
+  border-bottom: 2px solid red;
+  cursor: pointer;
+}
+.correct {
+  /* background-color: #00800047; */
+  border-bottom: 2px solid green;
+  cursor: pointer;
+}
+.correct:hover,
+.wrong:hover {
+  background-color: rgb(255, 255, 255, 0.1);
 }

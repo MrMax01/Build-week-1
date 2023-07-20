@@ -430,16 +430,18 @@ let arrQuestion = [];
 
 /*--------------------------------------------------------------------------------*/
 
-let domandaPescata = {};
 const main = document.querySelector("main");
 const header = document.querySelector("header");
 
 const footer = document.querySelector("footer");
-const numeroDiDomande = 10;
-let risposte = [];
-let timer = null;
-let domandaNumero = 0;
-let risultato = 0;
+const totalDomande = 10; //number of total answers
+let risposte = []; //list of answers to load under the questions
+let domandaPescata = {}; //random question picked
+
+let timer = null; //id timer
+let domandaNumero = 0; //number of answers done
+let risultato = 0; // number of correct answers
+const totalInfoAnswer = [];
 const logo = `<img src="./Assets/epicode_logo.png" alt="Epicode logo" id="logo" />`;
 const timeOutHTML = `
       ${logo}

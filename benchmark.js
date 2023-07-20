@@ -31,7 +31,27 @@ const controllaRisultato = () => {
   if (rispostaAttiva) {
     if (rispostaAttiva.innerText === domandaPescata.correct_answer) {
       risultato++;
+      totalInfoAnswer.push({
+        domanda: domandaPescata.question,
+        risposte: risposte,
+        yourPick: rispostaAttiva.innerText,
+        bool: true,
+      });
+    } else {
+      totalInfoAnswer.push({
+        domanda: domandaPescata.question,
+        risposte: risposte,
+        yourPick: rispostaAttiva.innerText,
+        bool: false,
+      });
     }
+  } else {
+    totalInfoAnswer.push({
+      domanda: domandaPescata.question,
+      risposte: risposte,
+      yourPick: "NO ANSWER",
+      bool: false,
+    });
   }
 };
 
@@ -96,17 +116,19 @@ const showDomanda = () => {
 };
 
 const app = () => {
-  if (domandaNumero < numeroDiDomande) {
+  if (domandaNumero < totalDomande) {
     clearInterval(timer);
     controllaRisultato();
     showDomanda();
   } else {
-    controllaRisultato();
-    clearInterval(timer);
+    controllaRisultato(); // adding last question
+    clearInterval(timer); //tolgo il timer;
+    /*----------LOAD RESULT PAGE----- */
     header.innerHTML = logo;
+    /* ---- HERE WE HAVE ALL THE MAIN------- */
     const resultPageHTML = `<div class="introdution">
     <h1 class="size-result no-margin">Results</h1>
-    <h2>The summary of your answers:</h2>
+    <h2 class="no-margin">The summary of your answers:</h2>
     </div>
     <div id="selector">
     <div class="center">
@@ -154,16 +176,64 @@ const app = () => {
       <p>${Math.abs(risultato - 10)}/10 questions</p>
     </div>
     </div>`;
-    main.innerHTML = resultPageHTML;
+    main.innerHTML = resultPageHTML; //load main
+    /* -----result graph ------*/
     document
       .querySelector("circle")
       .setAttribute("style", `stroke-dasharray: ${Math.floor((437 / 10) * risultato)} 500`);
-
-    document.querySelector("footer").innerHTML = `
+    //footer
+    footer.innerHTML = `
       <a href="feedback.html"
-        ><button class="button-luminoso middle"><b>RATE US</b></button></a
-      >
+        ><button class="button-luminoso no-float">RATE US</button></a
+        >
+        <button class="button-luminoso no-float" id='info'>INFO QUESTIONS</button>
+     
     `;
+    footer.classList.add("centerText");
+
+    /*INFO BUTTON LISTENER */
+    const info = document.getElementById("info");
+    info.addEventListener("click", () => {
+      main.innerHTML = ""; //clearing  main
+      footer.innerHTML = ""; //clearing footer
+      const body = document.querySelector("body");
+      body.classList.add("no-height");
+      /*TITLE PAGE*/
+      const h3 = document.createElement("h3");
+      h3.innerText = "CHECK YOUR RESULT:";
+      h3.classList.add("violet");
+      h3.classList.add("centerText");
+      main.appendChild(h3);
+      /*-------------------------------------- */
+
+      /* CREATE INFO LIST*/
+      for (let i = 0; i < totalInfoAnswer.length; i++) {
+        const h5 = document.createElement("h5");
+        h5.innerText = totalInfoAnswer[i].domanda;
+        const ul = document.createElement("ul");
+        ul.classList.add("no-margin");
+        ul.classList.add("no-show");
+        if (totalInfoAnswer[i].bool) {
+          h5.classList.add("correct");
+        } else {
+          h5.classList.add("wrong");
+        }
+        h5.addEventListener("click", () => {
+          ul.classList.toggle("show");
+        });
+        main.appendChild(h5);
+        for (let j = 0; j < totalInfoAnswer[i].risposte.length; j++) {
+          const li = document.createElement("li");
+          li.innerText = totalInfoAnswer[i].risposte[j];
+          ul.appendChild(li);
+        }
+        main.appendChild(ul);
+      }
+      /*FOOTER */
+      footer.innerHTML = `<a href="feedback.html"
+      ><button class="button-luminoso no-float" style="margin-bottom:4em;">RATE US</button></a
+      >`;
+    });
   }
 };
 
