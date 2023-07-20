@@ -49,8 +49,7 @@ const contatore = () => {
     document.getElementById("circle-time-out").setAttribute("style", `stroke-dasharray: ${sumPies} 500`);
 
     if (time < 0) {
-      clearTimeout(timer);
-      showDomanda();
+      app();
     }
   }, 1000);
 };
