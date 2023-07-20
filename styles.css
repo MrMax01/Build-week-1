@@ -25,6 +25,7 @@ main,
 footer {
   width: 80%;
   margin-inline: auto;
+  margin-bottom: 2em;
 }
 /* main {
   height: 20em;
@@ -143,6 +144,7 @@ ul {
 
 .containStar {
   text-align: center;
+  direction: rtl;
 }
 
 .star {
@@ -153,10 +155,10 @@ ul {
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 
-.stellina {
+/* .stellina {
   background-image: url(/Assets/star.svg);
   background-size: cover;
-}
+} */
 .input-feedback {
   margin-top: 20px;
   border: none;
@@ -168,7 +170,14 @@ ul {
   font-family: "Inter", sans-serif;
   font-size: 16px;
 }
-
+.star:hover,
+.star.selected,
+.star:hover ~ .star,
+.star.selected ~ .star {
+  /* transition: color 0.8s ease; */
+  background-image: url(/Assets/star.svg);
+  background-size: cover;
+}
 .input-feedback:focus {
   outline: none;
 }
