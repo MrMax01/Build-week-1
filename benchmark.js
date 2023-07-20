@@ -6,13 +6,14 @@
 4. una volta risposto l'ultima domanda il tasto PROSEGUI ci indirizzerà nella pagina 'result page'
 */
 const pickRandomQuestion = () => {
-  // const arrQuestion = questions.filter(elem => elem.difficulty === .value)
-  const randomIndex = Math.floor(Math.random() * questions.length);
-  domandaPescata = questions[randomIndex];
+  const randomIndex = Math.floor(Math.random() * arrQuestion.length);
+  domandaPescata = arrQuestion[randomIndex];
   risposte = domandaPescata.incorrect_answers.concat(domandaPescata.correct_answer);
   // .sort();
 };
 const cambioNumero = () => {
+  const numero = document.getElementById("numeroDomanda");
+
   domandaNumero++;
   numero.innerText = domandaNumero;
 };
@@ -57,7 +58,6 @@ const contatore = () => {
 
 const showDomanda = () => {
   main.innerHTML = "";
-  cambioNumero();
 
   pickRandomQuestion();
   //   console.log(domandaPescata.question);
@@ -75,6 +75,24 @@ const showDomanda = () => {
     button.innerText = risposte[i];
     main.appendChild(button);
   }
+  /*CREO IL FOOTER */
+  footer.innerHTML = "";
+  /*BUTTON PROSEGUI*/
+  footer.innerHTML = "";
+  const btnProsegui = document.createElement("button");
+  btnProsegui.classList.add("button-luminoso");
+  btnProsegui.setAttribute("id", "prosegui");
+  btnProsegui.innerText = "Prosegui";
+  footer.appendChild(btnProsegui);
+  console.log(btnProsegui);
+  const buttonProsegui = document.getElementById("prosegui");
+  buttonProsegui.addEventListener("click", app);
+  /*QUESTION /10 NEL FOOOTER */
+  const pQuestion = document.createElement("p");
+  pQuestion.classList.add("question-center");
+  pQuestion.innerHTML = `QUESTION <span id="numeroDomanda"></span><span class="violet"> / 10</span>`;
+  footer.appendChild(pQuestion);
+  cambioNumero();
 };
 
 const app = () => {
@@ -83,6 +101,7 @@ const app = () => {
     controllaRisultato();
     showDomanda();
   } else {
+    controllaRisultato();
     clearInterval(timer);
     header.innerHTML = logo;
     const resultPageHTML = `<div class="introdution">
@@ -148,6 +167,21 @@ const app = () => {
   }
 };
 
-buttonProsegui.addEventListener("click", app);
+const difficulty = document.querySelectorAll(".risposta");
+difficulty.forEach((elem) => {
+  elem.addEventListener("click", coloraRisposta);
+});
 
-showDomanda();
+const ready = document.getElementById("ready");
+ready.addEventListener("click", () => {
+  const difficoltaAttiva = document.querySelector(".active");
+  if (difficoltaAttiva) {
+    level = difficoltaAttiva.value;
+    arrQuestion = questions.filter((elem) => elem.difficulty === level);
+    // console.log(level);
+    // console.log(arrQuestion);
+    showDomanda();
+  } else {
+    window.alert("Pick a difficulty before starting!");
+  }
+});

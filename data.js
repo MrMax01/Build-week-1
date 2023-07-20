@@ -416,28 +416,30 @@ const questions = [
     incorrect_answers: ["Java Vendor Machine", "Java Visual Machine", "Just Virtual Machine"],
   },
 ];
+/* AGGIUNTA DIFFICOLTA'*/
+let level = "";
+let arrQuestion = [];
+// const easy = questions.filter((elem) => elem.difficulty === "easy");
+// // console.log(easy);
+
+// const medium = questions.filter((elem) => elem.difficulty === "medium");
+// // console.log(medium);
+
+// const hard = questions.filter((elem) => elem.difficulty === "hard");
+// // console.log(hard);
+
+/*--------------------------------------------------------------------------------*/
 
 let domandaPescata = {};
 const main = document.querySelector("main");
 const header = document.querySelector("header");
-const buttonProsegui = document.getElementById("prosegui");
+
+const footer = document.querySelector("footer");
 const numeroDiDomande = 10;
 let risposte = [];
-const numero = document.getElementById("numeroDomanda");
 let timer = null;
 let domandaNumero = 0;
 let risultato = 0;
-/* AGGIUNTA DIFFICOLTA'*/
-const easy = questions.filter((elem) => elem.difficulty === "easy");
-// console.log(easy);
-
-const medium = questions.filter((elem) => elem.difficulty === "medium");
-// console.log(medium);
-
-const hard = questions.filter((elem) => elem.difficulty === "hard");
-// console.log(hard);
-
-/*--------------------------------------------------------------------------------*/
 const logo = `<img src="./Assets/epicode_logo.png" alt="Epicode logo" id="logo" />`;
 const timeOutHTML = `
       ${logo}
