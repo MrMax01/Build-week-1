@@ -40,7 +40,7 @@ const contatore = () => {
   let sumPies = 0;
   seconds.innerText = time;
   timer = setInterval(() => {
-    if (time < 10) {
+    if (time <= 10) {
       seconds.innerText = "0" + --time;
     } else {
       seconds.innerText = --time;
