@@ -317,8 +317,8 @@ svg {
     -0.5px -0.5px 0px rgb(0, 0, 0, 0.7);
 }
 .text-time-out {
-  padding: 17px;
-  font-size: 5rem;
+  padding: 15px;
+  font-size: 4rem;
 }
 #circle-time-out {
   fill: none;
@@ -331,4 +331,14 @@ svg {
   top: -160px;
   left: 0px;
   rotate: 270;
+}
+.secText {
+  font-size: 0.4em;
+  /* padding: 1px; */
+  position: relative;
+  top: -60px;
+  left: 24px;
+}
+.seconds {
+  margin-left: 7px;
 }

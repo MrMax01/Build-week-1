@@ -433,7 +433,10 @@ const timeOutHTML = `
       <div class="time-out">
         <div class="outer-time-out">
           <div class="inner-time-out">
-            <div class="text-time-out"><span class="seconds"></span></div>
+            <div class="text-time-out">
+            <span class="seconds"></span>
+            <span class="secText">sec</span>
+            </div>
           </div>
         </div>
         <svg
