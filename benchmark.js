@@ -33,27 +33,27 @@ const controllaRisultato = () => {
   }
 };
 
-// const contatore = () => {
-//   const seconds = document.querySelector(".seconds");
-//   let time = 10;
-//   const equalPie = Math.floor(450 / time);
-//   let sumPies = 0;
-//   seconds.innerText = time;
-//   timer = setInterval(() => {
-//     if (time < 10) {
-//       seconds.innerText = "0" + --time;
-//     } else {
-//       seconds.innerText = --time;
-//     }
-//     sumPies += equalPie;
-//     document.getElementById("circle-time-out").setAttribute("style", `stroke-dasharray: ${sumPies} 500`);
+const contatore = () => {
+  const seconds = document.querySelector(".seconds");
+  let time = 10;
+  const equalPie = Math.floor(450 / time);
+  let sumPies = 0;
+  seconds.innerText = time;
+  timer = setInterval(() => {
+    if (time < 10) {
+      seconds.innerText = "0" + --time;
+    } else {
+      seconds.innerText = --time;
+    }
+    sumPies += equalPie;
+    document.getElementById("circle-time-out").setAttribute("style", `stroke-dasharray: ${sumPies} 500`);
 
-//     if (time < 0) {
-//       clearTimeout(timer);
-//       showDomanda();
-//     }
-//   }, 1000);
-// };
+    if (time < 0) {
+      clearTimeout(timer);
+      showDomanda();
+    }
+  }, 1000);
+};
 
 const showDomanda = () => {
   main.innerHTML = "";
