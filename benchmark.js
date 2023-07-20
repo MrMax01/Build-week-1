@@ -35,6 +35,7 @@ const controllaRisultato = () => {
         domanda: domandaPescata.question,
         risposte: risposte,
         yourPick: rispostaAttiva.innerText,
+        correctAnswer: domandaPescata.correct_answer,
         bool: true,
       });
     } else {
@@ -42,6 +43,7 @@ const controllaRisultato = () => {
         domanda: domandaPescata.question,
         risposte: risposte,
         yourPick: rispostaAttiva.innerText,
+        correctAnswer: domandaPescata.correct_answer,
         bool: false,
       });
     }
@@ -50,6 +52,7 @@ const controllaRisultato = () => {
       domanda: domandaPescata.question,
       risposte: risposte,
       yourPick: "NO ANSWER",
+      correctAnswer: domandaPescata.correct_answer,
       bool: false,
     });
   }
@@ -224,7 +227,20 @@ const app = () => {
         main.appendChild(h5);
         for (let j = 0; j < totalInfoAnswer[i].risposte.length; j++) {
           const li = document.createElement("li");
-          li.innerText = totalInfoAnswer[i].risposte[j];
+          if (
+            totalInfoAnswer[i].risposte[j] === totalInfoAnswer[i].yourPick ||
+            totalInfoAnswer[i].risposte[j] === totalInfoAnswer[i].correctAnswer
+          ) {
+            if (totalInfoAnswer[i].risposte[j] === totalInfoAnswer[i].correctAnswer) {
+              li.innerHTML = totalInfoAnswer[i].risposte[j] + " &#x2714;";
+            } else if (totalInfoAnswer[i].risposte[j] === totalInfoAnswer[i].yourPick) {
+              li.innerHTML = totalInfoAnswer[i].risposte[j] + " &#x2716;";
+            } else {
+              li.innerHTML = totalInfoAnswer[i].risposte[j] + " &#x2714;";
+            }
+          } else {
+            li.innerText = totalInfoAnswer[i].risposte[j];
+          }
           ul.appendChild(li);
         }
         main.appendChild(ul);
