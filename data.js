@@ -427,6 +427,17 @@ const numero = document.getElementById("numeroDomanda");
 let timer = null;
 let domandaNumero = 0;
 let risultato = 0;
+/* AGGIUNTA DIFFICOLTA'*/
+const easy = questions.filter((elem) => elem.difficulty === "easy");
+// console.log(easy);
+
+const medium = questions.filter((elem) => elem.difficulty === "medium");
+// console.log(medium);
+
+const hard = questions.filter((elem) => elem.difficulty === "hard");
+// console.log(hard);
+
+/*--------------------------------------------------------------------------------*/
 const logo = `<img src="./Assets/epicode_logo.png" alt="Epicode logo" id="logo" />`;
 const timeOutHTML = `
       ${logo}
@@ -434,8 +445,9 @@ const timeOutHTML = `
         <div class="outer-time-out">
           <div class="inner-time-out">
             <div class="text-time-out">
+            <span class="secText">seconds</span>
             <span class="seconds"></span>
-            <span class="secText">sec</span>
+            <span class="rimanenti">remaining</span>
             </div>
           </div>
         </div>
