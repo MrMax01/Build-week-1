@@ -90,7 +90,7 @@ ul {
   box-shadow: rgb(0, 145, 189) 0px 2px 4px 0px, rgb(18, 178, 247) 0px 2px 16px 0px;
   background-color: aqua;
 }
-/*BENCHMARK PAGE*/
+/*---------------------------BENCHMARK PAGE---------------------------*/
 .benchmark-stats {
   text-align: center;
   padding: 2em 4em;
@@ -109,7 +109,11 @@ ul {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.2);
 }
-
+.question-center {
+  text-align: center;
+  padding-left: 12em;
+  padding-top: 1em;
+}
 /*RESULT PAGE*/
 .introdution {
   text-align: center;
@@ -135,7 +139,7 @@ ul {
   margin: 0;
 }
 
-/*FEEDBACK PAGE*/
+/*-----------------------------FEEDBACK PAGE--------------------*/
 
 .containStar {
   text-align: center;
@@ -168,7 +172,7 @@ ul {
 .input-feedback:focus {
   outline: none;
 }
-/*CUSTOM CHECKBOX*/
+/*--------------------CUSTOM CHECKBOX------------------------*/
 /*CHECKBOX /*/
 .label-container {
   display: inline-block;
@@ -238,7 +242,7 @@ ul {
   background-color: #d20094;
 }
 
-/*CIRCLE result page*/
+/*----------------------CIRCLE result page---------------------------*/
 .skill {
   margin-inline: auto;
   width: 250px;
@@ -293,7 +297,7 @@ svg {
     stroke-dasharray: 30% 500;
   } */
 }
-/*CIRCLE TIMEOUT*/
+/*--------------------------------------CIRCLE TIMEOUT-----------------------------*/
 .time-out {
   width: 160px;
   height: 160px;
