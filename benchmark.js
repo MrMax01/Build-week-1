@@ -77,7 +77,7 @@ const showDomanda = () => {
 };
 
 const app = () => {
-  if (domandaNumero < numeroDomande) {
+  if (domandaNumero < numeroDiDomande) {
     clearInterval(timer);
     controllaRisultato();
     showDomanda();
