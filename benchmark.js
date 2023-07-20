@@ -33,18 +33,18 @@ const controllaRisultato = () => {
   }
 };
 
-const setTimeOut = () => {
+const contatore = () => {
   const seconds = document.querySelector(".seconds");
   let time = 10;
   const equalPie = Math.floor(450 / (time + 1));
   let sumPies = 0;
+  seconds.innerText = time;
   timer = setInterval(() => {
-    seconds.innerText = time;
-    time--;
+    seconds.innerText = --time;
     sumPies += equalPie;
     document.getElementById("circle-time-out").setAttribute("style", `stroke-dasharray: ${sumPies} 500`);
 
-    if (time < -1) {
+    if (time < 0) {
       clearTimeout(timer);
       showDomanda();
     }
@@ -63,6 +63,7 @@ const showDomanda = () => {
   h3.setAttribute("id", "domanda");
   main.appendChild(h3);
   //   console.log(risposte);
+  contatore();
   for (let i = 0; i < risposte.length; i++) {
     const button = document.createElement("button");
     button.classList.add("risposta");
@@ -70,7 +71,6 @@ const showDomanda = () => {
     button.innerText = risposte[i];
     main.appendChild(button);
   }
-  setTimeOut();
 };
 
 const app = () => {
