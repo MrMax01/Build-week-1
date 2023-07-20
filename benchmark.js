@@ -103,14 +103,15 @@ const app = () => {
             <div class="text">
             <span>
             <b
-              >Congratulations! <br />
-              <span class="aqua"> You passed the exam. </span></b
+              >${risultato >= 6 ? "Congratulations!" : "Oh no!"} <br />
+              <span class="aqua"> ${risultato >= 6 ? "You passed the exam" : "you don't pass the exam"}. </span></b
             >
             <span class="font-piccolo"
-              >We'll send you the certificate in few minutes. <br />
-              Check your email(including <br />
-              promotions/spam folder)</span
-            >
+              >${
+                risultato >= 6
+                  ? "We'll send you the certificate in few minutes. <br />Check your email(including <br /promotions/spam folder)</span>"
+                  : "Try Again!"
+              }
             </div>
           </div>
         </div>
