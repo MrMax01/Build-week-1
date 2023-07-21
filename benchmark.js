@@ -58,7 +58,7 @@ window.onload = function () {
   /*TIMER ON THE QUESTIONS*/
   const contatore = () => {
     const seconds = document.querySelector(".seconds");
-    let time = 10;
+    let time = 60;
     const equalPie = Math.floor(450 / time);
     let sumPies = 0;
     seconds.innerText = time;
