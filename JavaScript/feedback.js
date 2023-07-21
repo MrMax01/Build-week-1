@@ -28,11 +28,11 @@ body.addEventListener("keyup", (event) => {
     // console.log(numberStar);
     if (numberStar.length + 1 <= 6) {
       p.innerHTML =
-        "Siamo spiacenti se non siamo stati all'altezza delle tue aspettative. Siamo aperti a suggerimenti per migliorarci. &#x1F614;";
+        "We're sorry if we didn't live up to your expectations. We are open to suggestions for improvement. &#x1F614;";
     } else if (numberStar.length + 1 > 6 && numberStar.length < 8) {
-      p.innerHTML = "Grazie! Dicci dove possiamo migliorare per ottenere il voto pieno! &#128516;";
+      p.innerHTML = "Thank you! Tell us where we can improve to get the full grade! &#128516;";
     } else {
-      p.innerHTML = "Siamo contenti che i servizi da noi offerti siano stati soddisfacenti! &#x1F498;";
+      p.innerHTML = "We are happy that the services offered by us have been satisfactory! &#x1F498;";
     }
 
     document.querySelector("footer").appendChild(p);

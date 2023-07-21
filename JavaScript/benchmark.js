@@ -165,7 +165,7 @@ window.onload = function () {
               <span>
               <b
                 >${risultato >= 6 ? "Congratulations!" : "Oh no!"} <br />
-                <span class="aqua"> ${risultato >= 6 ? "You passed the exam" : "you don't pass the exam"}. </span></b
+                <span class="aqua"> ${risultato >= 6 ? "You passed the exam" : "you didn't pass the exam"}. </span></b
               >
               <span class="font-piccolo"
                 >${
