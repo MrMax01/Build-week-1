@@ -1,3 +1,4 @@
+/* CONTROLLO SE  LA CHECKBOX è CECKBOX*/
 document.getElementById("myButton").addEventListener("click", function () {
   const checkbox = document.getElementById("myCheckbox");
   if (!checkbox.checked) {

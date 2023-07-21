@@ -441,7 +441,7 @@ let domandaPescata = {}; //random question picked
 let timer = null; //id timer
 let domandaNumero = 0; //number of answers done
 let risultato = 0; // number of correct answers
-const totalInfoAnswer = [];
+const totalInfoAnswer = []; //info qustions
 const logo = `<img src="./Assets/epicode_logo.png" alt="Epicode logo" id="logo" />`;
 const timeOutHTML = `
       ${logo}

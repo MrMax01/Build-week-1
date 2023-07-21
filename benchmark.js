@@ -1,22 +1,20 @@
-/*
-1. Selezionare il main con queryselector('main') e caricare in modo casuale la domanda con le possibili risposte.
-2.al click di uno delle risposte il bottone si dovrà colorare di viola. Se una risposta è già stata selezionata e ne clicchiamo un' altra, la risposta selezionata precedentemente perderà il colore e verrà colorato quella nuova . 
-3.Nel momento in cui l'utente clicca prosegui prendi la risposta data e controlli se è corretta. Se è corretta oppure no verrà salvata in un array dove verrà visualizzato il punteggio dell'utente (insieme di risposte esatte e errate ---> [true, flase, true, true, false, true])
-
-4. una volta risposto l'ultima domanda il tasto PROSEGUI ci indirizzerà nella pagina 'result page'
-*/
+/*-------------------TAKE A RANDOM QUESTION TO DISPLAY------------ */
 const pickRandomQuestion = () => {
   const randomIndex = Math.floor(Math.random() * arrQuestion.length);
   domandaPescata = arrQuestion[randomIndex];
   risposte = domandaPescata.incorrect_answers.concat(domandaPescata.correct_answer);
   // .sort();
 };
+
+/*-------------change the number during the test--------------- */
 const cambioNumero = () => {
   const numero = document.getElementById("numeroDomanda");
 
   domandaNumero++;
   numero.innerText = domandaNumero;
 };
+
+/*-----------PUT A COLOR ON THE ANSWER SELECTED-----*/
 const coloraRisposta = (event) => {
   const rispostaAttiva = document.querySelector(".active");
 
@@ -25,18 +23,17 @@ const coloraRisposta = (event) => {
   }
   event.currentTarget.classList.add("active");
 };
-
+/*CONTROL THE RESULT. TAKE THE RESULT AND SAVE*/
 const controllaRisultato = () => {
   const rispostaAttiva = document.querySelector(".active");
   if (rispostaAttiva) {
     if (rispostaAttiva.innerText === domandaPescata.correct_answer) {
       risultato++;
       totalInfoAnswer.push({
-        domanda: domandaPescata.question,
-        risposte: risposte,
-        yourPick: rispostaAttiva.innerText,
-        correctAnswer: domandaPescata.correct_answer,
-        bool: true,
+        domanda: domandaPescata.question, //QUESTION
+        risposte: risposte /* ANSWERS LIST */,
+        yourPick: rispostaAttiva.innerText /*ANSWER USER PICK */,
+        correctAnswer: domandaPescata.correct_answer /*ANSWER CORRECT */,
       });
     } else {
       totalInfoAnswer.push({
@@ -44,7 +41,6 @@ const controllaRisultato = () => {
         risposte: risposte,
         yourPick: rispostaAttiva.innerText,
         correctAnswer: domandaPescata.correct_answer,
-        bool: false,
       });
     }
   } else {
@@ -53,11 +49,10 @@ const controllaRisultato = () => {
       risposte: risposte,
       yourPick: "NO ANSWER",
       correctAnswer: domandaPescata.correct_answer,
-      bool: false,
     });
   }
 };
-
+/*TIMER ON THE QUESTIONS*/
 const contatore = () => {
   const seconds = document.querySelector(".seconds");
   let time = 10;
@@ -78,7 +73,7 @@ const contatore = () => {
     }
   }, 1000);
 };
-
+/* SHOW QUESTION AND ANSWERS ON THE PAGE. CREATE ALL THE PAGE*/
 const showDomanda = () => {
   main.innerHTML = "";
 
@@ -117,7 +112,11 @@ const showDomanda = () => {
   footer.appendChild(pQuestion);
   cambioNumero();
 };
+/* THIS IS A FUNCTION THAT CHECK (USUALLY ONCLICK) IF THE QUESTION INDEX IS < OF TOTAL QUESTIONS.
+SO IF YOU DON'T HAVE ANSWER ALL THE QUESTIONS THE PAGE WILL DISPLAY ANOTHER QUESTION (INDEX QUESTION+1)
+ELSE THE PLAGE WILL DISPLAY THE RESULT PAGE.
 
+*/
 const app = () => {
   if (domandaNumero < totalDomande) {
     clearInterval(timer);
@@ -196,6 +195,8 @@ const app = () => {
 
     /*INFO BUTTON LISTENER */
     const info = document.getElementById("info");
+
+    /*ONCLICK OF THIS BUTTON WE'LL DISPLAY ANOTHER PAGE WITH INFO ON QUESTIONS*/
     info.addEventListener("click", () => {
       main.innerHTML = ""; //clearing  main
       footer.innerHTML = ""; //clearing footer
@@ -225,8 +226,10 @@ const app = () => {
           ul.classList.toggle("show");
         });
         main.appendChild(h5);
+
         for (let j = 0; j < totalInfoAnswer[i].risposte.length; j++) {
           const li = document.createElement("li");
+          /* THIS IF WILL HELP US TO DISPLAY WHICH ANSER IS CORRECT AND WHICH IS UNCORRECT*/
           if (
             totalInfoAnswer[i].risposte[j] === totalInfoAnswer[i].yourPick ||
             totalInfoAnswer[i].risposte[j] === totalInfoAnswer[i].correctAnswer
@@ -241,6 +244,7 @@ const app = () => {
           } else {
             li.innerText = totalInfoAnswer[i].risposte[j];
           }
+          /*-------------------------------------------------------------------------------- */
           ul.appendChild(li);
         }
         main.appendChild(ul);
@@ -250,9 +254,13 @@ const app = () => {
       ><button class="button-luminoso no-float" style="margin-bottom:4em;">RATE US</button></a
       >`;
     });
+    /*----------------HERE ADDEVENTLISTENER IS FINISHED--------- */
   }
+  /*-------------- HERE THE ELSE IS FINISHED--------- */
 };
+/*--------- HERE APP FUNCTION IS FINISHED------------- */
 
+/*------------- WHEN THE PAGE IS LOAD THE USER MUST SELECT THE DIFFICULTY----------- */
 const difficulty = document.querySelectorAll(".risposta");
 difficulty.forEach((elem) => {
   elem.addEventListener("click", coloraRisposta);
