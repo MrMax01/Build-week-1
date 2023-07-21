@@ -84,7 +84,7 @@ window.onload = function () {
     //   console.log(domandaPescata.question);
     header.innerHTML = timeOutHTML;
     const h3 = document.createElement("h3");
-    h3.innerText = domandaPescata.question;
+    h3.innerHTML = domandaPescata.question;
     h3.setAttribute("id", "domanda");
     main.appendChild(h3);
     //   console.log(risposte);
@@ -231,7 +231,7 @@ window.onload = function () {
         /* CREATE INFO LIST*/
         for (let i = 0; i < totalInfoAnswer.length; i++) {
           const h5 = document.createElement("h5");
-          h5.innerText = totalInfoAnswer[i].domanda;
+          h5.innerHTML = totalInfoAnswer[i].domanda;
           const ul = document.createElement("ul");
           ul.classList.add("no-margin");
           ul.classList.add("no-show");
