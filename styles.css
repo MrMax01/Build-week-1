@@ -82,10 +82,10 @@ ul {
   float: right;
   cursor: pointer;
   padding: 15px 50px;
-  border: 3px solid aqua;
+  border: 3px solid #00ffff;
   font-family: "Inter", sans-serif;
   font-size: 20px;
-  color: aqua;
+  color: #00ffff;
   background-color: transparent;
   /* background-color: aqua; */
   /* border: none; */
@@ -97,7 +97,7 @@ ul {
   border: 3px solid transparent;
   color: black;
   box-shadow: rgb(0, 145, 189) 0px 2px 4px 0px, rgb(18, 178, 247) 0px 2px 16px 0px;
-  background-color: aqua;
+  background-color: #00ffff;
 }
 .no-float {
   float: none;
