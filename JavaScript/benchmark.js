@@ -93,7 +93,7 @@ window.onload = function () {
       const button = document.createElement("button");
       button.classList.add("risposta");
       button.onclick = coloraRisposta;
-      button.innerText = risposte[i];
+      button.innerHTML = risposte[i];
       main.appendChild(button);
     }
     /*CREO IL FOOTER */
