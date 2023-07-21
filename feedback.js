@@ -25,7 +25,7 @@ body.addEventListener("keyup", (event) => {
     const p = document.getElementById("msg");
     p.innerHTML = "";
     const numberStar = document.querySelectorAll(".star.selected ~ .star");
-    console.log(numberStar);
+    // console.log(numberStar);
     if (numberStar.length + 1 <= 6) {
       p.innerHTML =
         "Siamo spiacenti che non siamo stati all'altezza delle tue aspettative. Siamo aperti a suggerimenti per migliorarci. &#x1F614;";
