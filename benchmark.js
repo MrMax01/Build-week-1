@@ -3,8 +3,7 @@ window.onload = function () {
   const pickRandomQuestion = () => {
     const randomIndex = Math.floor(Math.random() * arrQuestion.length);
     domandaPescata = arrQuestion[randomIndex];
-    risposte = domandaPescata.incorrect_answers.concat(domandaPescata.correct_answer);
-    // .sort();
+    risposte = domandaPescata.incorrect_answers.concat(domandaPescata.correct_answer).sort();
   };
 
   /*-------------change the number during the test--------------- */
@@ -125,8 +124,9 @@ window.onload = function () {
   //     } else {
   //       rispostaAttiva.classList.add("lightRed");
   //     }
-  //     clearTimeout(lagId);
-  //   }, 3000);
+  //     controllaRisultato();
+  //     showDomanda();
+  //   }, 1000);
   // };
   /* THIS IS A FUNCTION THAT CHECK (USUALLY ONCLICK) IF THE QUESTION INDEX IS < OF TOTAL QUESTIONS.
   SO IF YOU DON'T HAVE ANSWER ALL THE QUESTIONS THE PAGE WILL DISPLAY ANOTHER QUESTION (INDEX QUESTION+1)
@@ -225,6 +225,7 @@ window.onload = function () {
         h3.classList.add("violet");
         h3.classList.add("centerText");
         main.appendChild(h3);
+
         /*-------------------------------------- */
 
         /* CREATE INFO LIST*/
