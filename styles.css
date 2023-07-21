@@ -406,3 +406,9 @@ svg {
 .wrong:hover {
   background-color: rgb(255, 255, 255, 0.1);
 }
+.lightRed {
+  background-color: rgba(255, 0, 0, 0.295);
+}
+.lightGreen {
+  background-color: rgba(0, 255, 0, 0.295);
+}

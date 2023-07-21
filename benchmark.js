@@ -106,7 +106,7 @@ window.onload = function () {
     btnProsegui.setAttribute("id", "prosegui");
     btnProsegui.innerText = "Prosegui";
     footer.appendChild(btnProsegui);
-    // console.log(btnProsegui);
+    console.log(btnProsegui);
     const buttonProsegui = document.getElementById("prosegui");
     buttonProsegui.addEventListener("click", app);
     /*QUESTION /10 NEL FOOOTER */
