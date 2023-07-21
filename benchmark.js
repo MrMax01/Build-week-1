@@ -116,6 +116,18 @@ window.onload = function () {
     footer.appendChild(pQuestion);
     cambioNumero();
   };
+
+  // const lagShowAnswer = () => {
+  //   const lagId = setTimeout(() => {
+  //     const rispostaAttiva = document.querySelector(".active");
+  //     if (rispostaAttiva.innerText === domandaPescata.question) {
+  //       rispostaAttiva.classList.add("lightGreen");
+  //     } else {
+  //       rispostaAttiva.classList.add("lightRed");
+  //     }
+  //     clearTimeout(lagId);
+  //   }, 3000);
+  // };
   /* THIS IS A FUNCTION THAT CHECK (USUALLY ONCLICK) IF THE QUESTION INDEX IS < OF TOTAL QUESTIONS.
   SO IF YOU DON'T HAVE ANSWER ALL THE QUESTIONS THE PAGE WILL DISPLAY ANOTHER QUESTION (INDEX QUESTION+1)
   ELSE THE PLAGE WILL DISPLAY THE RESULT PAGE.
@@ -124,6 +136,7 @@ window.onload = function () {
   const app = () => {
     if (domandaNumero < totalDomande) {
       clearInterval(timer);
+      // lagShowAnswer();
       controllaRisultato();
       showDomanda();
     } else {
