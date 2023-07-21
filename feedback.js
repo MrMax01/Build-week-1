@@ -1,3 +1,4 @@
+/* SEZIONE PER IL VOTO*/
 const stars = document.querySelectorAll(".star");
 stars.forEach((star) => {
   star.addEventListener("click", (event) => {
@@ -14,7 +15,7 @@ stars.forEach((star) => {
   });
   //   star.classList.add("selected");
 });
-
+/* CONTA STELLINE RICEVUTO UNA VOLTA PREMUTO UTENTE E RILASCIA UN MESSAGGIO A SECONDA DEL VOTO DATO*/
 const body = document.querySelector("body");
 
 body.addEventListener("keyup", (event) => {
